@@ -11,19 +11,21 @@ __email__ = "p.pakravan@mail.utoronto.ca"
 __copyright__ = "2015 Paniz Pakravan"
 __date__ = "06 November 2015"
 
+VOWELS = ["a", "e", "i", "o", "u"]
 
 def pig_latinify(word):
-    first_letter = word[0]
-    if first_letter in VOWELS:
-        return word + "yay"
     """
     Describe your function
 
     :param :
-    :return: converted_sentence
+    :return: output_word
     :raises:
 
     """
-    result = ""
+    first_letter = word[0]
+    if first_letter in VOWELS:  # case a)
+        output_word = word + "yay"
 
-    return result
+    return output_word
+
+print(pig_latinify("apple"))
