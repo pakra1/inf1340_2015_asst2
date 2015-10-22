@@ -6,18 +6,21 @@ This module converts English words to Pig Latin words
 
 """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
-__copyright__ = "2015 Susan Sim"
-__license__ = "MIT License"
+__author__ = 'Paniz Pakravan'
+__email__ = "p.pakravan@mail.utoronto.ca"
+__copyright__ = "2015 Paniz Pakravan"
+__date__ = "06 November 2015"
 
 
 def pig_latinify(word):
+    first_letter = word[0]
+    if first_letter in VOWELS:
+        return word + "yay"
     """
     Describe your function
 
     :param :
-    :return:
+    :return: converted_sentence
     :raises:
 
     """

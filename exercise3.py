@@ -7,10 +7,10 @@ implemented as lists of lists.
 
 """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
-__copyright__ = "2015 Susan Sim"
-__license__ = "MIT License"
+__author__ = 'Paniz Pakravan'
+__email__ = "p.pakravan@mail.utoronto.ca"
+__copyright__ = "2015 Paniz Pakravan"
+__date__ = "06 November 2015"
 
 
 def union(table1, table2):
