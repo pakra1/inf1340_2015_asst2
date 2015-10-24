@@ -6,7 +6,7 @@ This module converts performs substring matching for DNA sequencing
 
 """
 
-__author__ = 'Paniz Pakravan'
+__author__ = "Paniz Pakravan"
 __email__ = "p.pakravan@mail.utoronto.ca"
 __copyright__ = "2015 Paniz Pakravan"
 __date__ = "06 November 2015"

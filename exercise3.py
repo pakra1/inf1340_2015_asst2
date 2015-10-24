@@ -7,7 +7,7 @@ implemented as lists of lists.
 
 """
 
-__author__ = 'Paniz Pakravan'
+__author__ = "Paniz Pakravan"
 __email__ = "p.pakravan@mail.utoronto.ca"
 __copyright__ = "2015 Paniz Pakravan"
 __date__ = "06 November 2015"
