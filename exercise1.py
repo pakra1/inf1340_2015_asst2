@@ -11,6 +11,7 @@ __email__ = "p.pakravan@mail.utoronto.ca"
 __copyright__ = "2015 Paniz Pakravan"
 __date__ = "06 November 2015"
 
+
 VOWELS = ["a", "e", "i", "o", "u"]
 
 def pig_latinify(word):
@@ -23,9 +24,18 @@ def pig_latinify(word):
 
     """
     first_letter = word[0]
-    if first_letter in VOWELS:  # case a)
+
+    if first_letter in VOWELS:
         output_word = word + "yay"
+    else:
+        for i in range(len(word)):  #scan for vowel if starts with consonant
+            individual_letter = word[i]
+            if individual_letter in VOWELS:
+                output_word = word[i:] + word[:i] + "ay"
+                break
+            else:
+                continue
 
-    return output_word
+    print output_word
 
-print(pig_latinify("apple"))
+pig_latinify("dog")
