@@ -16,7 +16,7 @@ VOWELS = ["a", "e", "i", "o", "u"]
 
 def pig_latinify(word):
     """
-    Describe your function
+    Convert English word input and convert into Pig Latin word.
 
     :param :
     :return: output_word
@@ -28,7 +28,8 @@ def pig_latinify(word):
     if first_letter in VOWELS:
         output_word = word + "yay"
     else:
-        for i in range(len(word)):  #scan for vowel if starts with consonant
+    #scan for vowel if word starts with a consonant
+        for i in range(len(word)):
             individual_letter = word[i]
             if individual_letter in VOWELS:
                 output_word = word[i:] + word[:i] + "ay"
@@ -38,4 +39,4 @@ def pig_latinify(word):
 
     print output_word
 
-pig_latinify("dog")
+#pig_latinify("dog")
