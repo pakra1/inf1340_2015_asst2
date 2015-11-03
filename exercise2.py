@@ -26,9 +26,7 @@ def find(input_string, substring, start, end):
     #to ensure that search is kept within the index length that matches the length of the input_substring
     while len(input_string) < end:
         end = len(input_string)
-    else:
-        end = end
-
+   
     for index in range(start, end):
         #counter ensures perfect match between input_string and substring
         found_count = 0
