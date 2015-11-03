@@ -7,11 +7,40 @@ implemented as lists of lists.
 
 """
 
-__author__ = "Paniz Pakravan"
+__author__ = 'Paniz Pakravan and Shu Yun Susan Shen'
 __email__ = "p.pakravan@mail.utoronto.ca"
 __copyright__ = "2015 Paniz Pakravan"
 __date__ = "06 November 2015"
 
+table1 = [["Number", "Surname", "Age"],
+             [7274, "Robinson", 37],
+             [7432, "O'Malley", 39],
+             [9824, "Darkes", 38]]
+table2 = [["Number", "Surname", "Age"],
+            [9297, "O'Malley", 56],
+            [7432, "O'Malley", 39],
+            [9824, "Darkes", 38]]
+
+def check_stat(table1, table2):
+
+# first thing check row 0, looking at the number of columns
+
+    if len(table1[0])==len(table2[0]):
+        #counter to keep track of similar column titles and numbers
+        count = 0
+        for index in range(len(table1[0])):
+            table1_column = table1[0][index]
+            table2_column = table2[0][index]
+            if table1_column == table2_column:
+                count += 1
+        if count == len(table1[0]):
+            return 0
+        else:
+            return "MismatchedAttributesException"
+    else:
+        return "MismatchedAttributesException"
+
+check_stat(table1, table2)
 
 def union(table1, table2):
     """
@@ -23,6 +52,19 @@ def union(table1, table2):
     :raises: MismatchedAttributesException:
         if tables t1 and t2 don't have the same attributes
     """
+
+    x = check_stat(table1, table2)
+    if x == 0:
+        for i in range(len(table2)):
+            item = table2[i]
+            if item not in table1:
+                table1.append(item)
+            else:
+                continue
+    new_table = table1 + item
+
+#returns new table with all unique rows that appear in either table
+
     return []
 
 
@@ -31,6 +73,8 @@ def intersection(table1, table2):
     Describe your function
 
     """
+#returns new table with unique rows that appear in both tables
+
     return []
 
 
@@ -39,6 +83,8 @@ def difference(table1, table2):
     Describe your function
 
     """
+
+#returns new table with unique rows in the first table
     return []
 
 

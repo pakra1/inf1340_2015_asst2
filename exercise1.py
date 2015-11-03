@@ -6,7 +6,7 @@ This module converts English words to Pig Latin words
 
 """
 
-__author__ = "Paniz Pakravan"
+__author__ = 'Paniz Pakravan'
 __email__ = "p.pakravan@mail.utoronto.ca"
 __copyright__ = "2015 Paniz Pakravan"
 __date__ = "06 November 2015"
@@ -25,12 +25,7 @@ def pig_latinify(word):
     first_letter = word[0]
     if first_letter in VOWELS:  # case a)
         output_word = word + "yay"
-    else:
-        output_word = word[1:] + word[0] + "ay"
 
     return output_word
 
 print(pig_latinify("apple"))
-print(pig_latinify("is"))
-print(pig_latinify("dog"))
-print(pig_latinify("scratch"))
