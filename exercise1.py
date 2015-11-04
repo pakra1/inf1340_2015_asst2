@@ -37,7 +37,8 @@ TEST CASE 4:
     Expected Outputs: "atchscray"
     Actual Outputs: "atchscray"
     """
-    first_letter = word[0]
+
+first_letter = word[0]
 
     if first_letter in VOWELS:
         output_word = word + "yay"

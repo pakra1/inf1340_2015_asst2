@@ -24,20 +24,20 @@ def test_pig_latinify():
 
     try:
         pig_latinify("dog") == "ogday"
-    except ValueError:
+    except InputError:
         assert True
 
     try:
         pig_latinify("is") == "isyay"
-    except ValueError:
+    except InputError:
         assert True
 
     try:
         pig_latinify("apple") == "appleyay"
-    except ValueError:
+    except InputError:
         assert True
 
     try:
         pig_latinify("scratch") == "atchscray"
-    except ValueError:
+    except InputError:
         assert True
