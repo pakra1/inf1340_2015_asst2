@@ -4,11 +4,9 @@
 This module converts English words to Pig Latin words
 """
 
-__author__ = 'Paniz Pakravan'
-__email__ = "p.pakravan@mail.utoronto.ca"
-__copyright__ = "2015 Paniz Pakravan"
-__date__ = "06 November 2015"
-
+__authors__ = 'Paniz Pakravan', 'Shu Yun Susan Shen'
+__emails__ = 'p.pakravan@mail.utoronto.ca', 'shuyun.shen@mail.utoronto.ca'
+__date__ = '06 November 2015'
 
 VOWELS = ["a", "e", "i", "o", "u"]
 
@@ -19,8 +17,25 @@ def pig_latinify(word):
     :return: output_word
     :raises: InputError?
 
-    Inputs:
-    Expected
+TEST CASE 1:
+    Inputs: "dog"
+    Expected Outputs: "ogday"
+    Actual Outputs: "ogday"
+
+TEST CASE 2:
+    Inputs: "is"
+    Expected Outputs: "isyay"
+    Actual Outputs: "isyay"
+
+TEST CASE 3:
+    Inputs: "apple"
+    Expected Outputs: "appleyay"
+    Actual Outputs: "appleyay"
+
+TEST CASE 4:
+    Inputs: "scratch"
+    Expected Outputs: "atchscray"
+    Actual Outputs: "atchscray"
     """
     first_letter = word[0]
 

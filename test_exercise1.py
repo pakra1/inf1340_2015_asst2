@@ -6,10 +6,9 @@ Test module for exercise1.py
 
 """
 
-__author__ = 'Paniz Pakravan'
-__email__ = "p.pakravan@mail.utoronto.ca"
-__copyright__ = "2015 Paniz Pakravan"
-__date__ = "06 November 2015"
+__authors__ = 'Paniz Pakravan', 'Shu Yun Susan Shen'
+__emails__ = 'p.pakravan@mail.utoronto.ca', 'shuyun.shen@mail.utoronto.ca'
+__date__ = '06 November 2015'
 
 
 from exercise1 import pig_latinify
@@ -29,7 +28,7 @@ def test_pig_latinify():
         assert True
 
     try:
-        pig_latinify("is") == "isay"
+        pig_latinify("is") == "isyay"
     except ValueError:
         assert True
 
