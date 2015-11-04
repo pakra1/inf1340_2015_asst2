@@ -15,9 +15,12 @@ VOWELS = ["a", "e", "i", "o", "u"]
 def pig_latinify(word):
     """
     Convert English word input and convert into Pig Latin word.
-    :param :
+    :param : word
     :return: output_word
-    :raises:
+    :raises: InputError?
+
+    Inputs:
+    Expected
     """
     first_letter = word[0]
 
