@@ -67,4 +67,3 @@ def multi_find(input_string, substring, start, end):
             start = find_word + 1
     return ",".join(locations_found)
 
-
