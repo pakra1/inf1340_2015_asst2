@@ -15,29 +15,17 @@ from exercise1 import pig_latinify
 
 WORDS = ["dog", "is", "apple", "scratch"]
 
-def test_pig_latinify():
+def test_basic():
     """
     Basic test cases from assignment hand out
     """
-    for item in WORDS:
-        assert True
+    assert pig_latinify("dog") == "ogday"
+    assert pig_latinify("scratch") == "atchscray"
+    assert pig_latinify("is") == "isyay"
+    assert pig_latinify("apple") == "appleyay"
 
+def test_basic_exception():
     try:
-        pig_latinify("dog") == "ogday"
-    except InputError:
-        assert True
-
-    try:
-        pig_latinify("is") == "isyay"
-    except InputError:
-        assert True
-
-    try:
-        pig_latinify("apple") == "appleyay"
-    except InputError:
-        assert True
-
-    try:
-        pig_latinify("scratch") == "atchscray"
-    except InputError:
-        assert True
+        item = "ogday" or "atchscray" or "isyay" or "appleyay"
+    except AttributeError:
+        print ("oops")

@@ -18,19 +18,19 @@ def pig_latinify(word):
     :raises: InputError?
 
 TEST CASE 1:
-    Inputs: "dog"
-    Expected Outputs: "ogday"
-    Actual Outputs: "ogday"
+    Input: "dog"
+    Expected Output: "ogday"
+    Actual Output: "ogday"
 
 TEST CASE 2:
-    Inputs: "is"
-    Expected Outputs: "isyay"
-    Actual Outputs: "isyay"
+    Input: "is"
+    Expected Output: "isyay"
+    Actual Output: "isyay"
 
 TEST CASE 3:
-    Inputs: "apple"
-    Expected Outputs: "appleyay"
-    Actual Outputs: "appleyay"
+    Input: "apple"
+    Expected Output: "appleyay"
+    Actual Output: "appleyay"
 
 TEST CASE 4:
     Inputs: "scratch"
@@ -38,7 +38,7 @@ TEST CASE 4:
     Actual Outputs: "atchscray"
     """
 
-first_letter = word[0]
+    first_letter = word[0]
 
     if first_letter in VOWELS:
         output_word = word + "yay"
@@ -52,6 +52,7 @@ first_letter = word[0]
             else:
                 continue
 
-    print output_word
+    return output_word
 
-pig_latinify("dog")
+print pig_latinify("scratch")
+
