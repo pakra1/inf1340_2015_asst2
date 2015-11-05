@@ -50,6 +50,9 @@ def test_union():
 
     assert is_equal(result, union(GRADUATES, MANAGERS))
 
+def negative_test_union():
+    is_equal(result, union(table3, table4))
+    return -1
 
 def test_intersection():
     """
@@ -60,6 +63,12 @@ def test_intersection():
               [9824, "Darkes", 38]]
 
     assert is_equal(result, intersection(GRADUATES, MANAGERS))
+
+def negative_test_intersection():
+    result[["Number", "Surname", "Age"],
+                [7432, "Lumiere", 39],
+                [9824, "Walter", 38]]
+    Return -1
 
 
 def test_difference():
