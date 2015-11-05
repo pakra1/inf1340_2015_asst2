@@ -51,21 +51,20 @@ def union(table1, table2):
     :raises: MismatchedAttributesException:
         if tables t1 and t2 don't have the same attributes
     """
-
+#returns new table with all unique rows that appear in either table
     x = check_stat(table1, table2)
+    new_table = []
+    new_table.append(table1)
     if x == 0:
         for i in range(len(table2)):
             item = table2[i]
             if item not in table1:
-                table1.append(item)
+                new_table.append(item)
             else:
                 continue
-    new_table = table1 + item
+    print new_table
 
-#returns new table with all unique rows that appear in either table
-
-    return []
-
+union(table1,table2)
 
 def intersection(table1, table2):
     """
@@ -73,19 +72,38 @@ def intersection(table1, table2):
 
     """
 #returns new table with unique rows that appear in both tables
+    x = check_stat(table1, table2)
+    new_table = []
+    if x == 0:
+        for i in range(len(table1)):
+            item = table1[i]
+            if item in table2:
+                new_table.append(item)
+            else:
+                continue
+    print new_table
 
-    return []
-
+intersection(table1,table2)
 
 def difference(table1, table2):
     """
     Describe your function
 
     """
-
 #returns new table with unique rows in the first table
-    return []
+    x = check_stat(table1, table2)
+    new_table = []
+    new_table.append(table1[0])
+    if x == 0:
+        for i in range(len(table1)):
+            item = table1[i]
+            if item not in table2:
+                new_table.append(item)
+            else:
+                continue
+    print new_table
 
+difference (table1,table2)
 
 #####################
 # HELPER FUNCTIONS ##
