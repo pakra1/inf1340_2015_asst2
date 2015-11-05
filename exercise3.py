@@ -51,7 +51,6 @@ def union(table1, table2):
     :raises: MismatchedAttributesException:
         if tables t1 and t2 don't have the same attributes
     """
-
 #returns new table with all unique rows that appear in either table
     x = check_stat(table1, table2)
     new_table = []
@@ -66,7 +65,6 @@ def union(table1, table2):
     print new_table
 
 union(table1,table2)
-
 
 def intersection(table1, table2):
     """
@@ -87,13 +85,11 @@ def intersection(table1, table2):
 
 intersection(table1,table2)
 
-
 def difference(table1, table2):
     """
     Describe your function
 
     """
-
 #returns new table with unique rows in the first table
     x = check_stat(table1, table2)
     new_table = []
