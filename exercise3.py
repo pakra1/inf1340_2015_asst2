@@ -54,14 +54,15 @@ def union(GRADUATES, MANAGERS):
 #returns new table with all unique rows that appear in either table
     x = check_stat(GRADUATES, MANAGERS)
     new_table = []
-    new_table.append(GRADUATES)
+
     if x == 0:
         for i in range(len(MANAGERS)):
             item = MANAGERS[i]
-            if item not in GRADUATES:
-                new_table.append(item)
-            else:
+            new_table.append(GRADUATES[i])
+            if item in new_table:
                 continue
+            else:
+                new_table.append(MANAGERS[i])
     return new_table
 
 union(GRADUATES,MANAGERS)
@@ -74,6 +75,7 @@ def intersection(GRADUATES, MANAGERS):
 #returns new table with unique rows that appear in both tables
     x = check_stat(GRADUATES, MANAGERS)
     new_table = []
+
     if x == 0:
         for i in range(len(GRADUATES)):
             item = GRADUATES[i]
@@ -94,6 +96,7 @@ def difference(GRADUATES, MANAGERS):
     x = check_stat(GRADUATES, MANAGERS)
     new_table = []
     new_table.append(GRADUATES[0])
+    
     if x == 0:
         for i in range(len(GRADUATES)):
             item = GRADUATES[i]
