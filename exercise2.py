@@ -16,7 +16,7 @@ def find(input_string, substring, start, end):
     Return the lowest index where the substring is found without using find
 
     :param : input_string, substring, start, end
-    :return:
+    :return: the lowest substring index
     :raises:
 
     """
@@ -50,7 +50,7 @@ def multi_find(input_string, substring, start, end):
     If no substring is found, empty string is returned
 
     :param : input_string, substring, start, end
-    :return:
+    :return: string with 0 or > indexes
     :raises:
 
     """

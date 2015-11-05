@@ -13,7 +13,6 @@ __date__ = '06 November 2015'
 
 from exercise1 import pig_latinify
 
-WORDS = ["dog", "is", "apple", "scratch"]
 
 def test_basic():
     """
@@ -24,8 +23,9 @@ def test_basic():
     assert pig_latinify("is") == "isyay"
     assert pig_latinify("apple") == "appleyay"
 
-def test_basic_exception():
-    try:
-        item = "ogday" or "atchscray" or "isyay" or "appleyay"
-    except AttributeError:
-        print ("oops")
+def test_advanced():
+    assert pig_latinify("bear") == "earbay"
+    assert pig_latinify("porcupine") == "orcupinepay"
+    assert pig_latinify("seal") == "ealsay"
+    assert pig_latinify("boar") == "oarbay"
+

@@ -15,7 +15,7 @@ def pig_latinify(word):
     Convert English word input and convert into Pig Latin word.
     :param : word
     :return: output_word
-    :raises: InputError?
+    :raises:
 
 TEST CASE 1:
     Input: "dog"
@@ -54,5 +54,5 @@ TEST CASE 4:
 
     return output_word
 
-#pig_latinify("scratch")
+pig_latinify("scratch")
 
