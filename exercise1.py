@@ -1,28 +1,43 @@
 #!/usr/bin/env python
 
 """ Assignment 2, Exercise 1, INF1340, Fall, 2015. Pig Latin
-
 This module converts English words to Pig Latin words
-
 """
 
-__author__ = 'Paniz Pakravan'
-__email__ = "p.pakravan@mail.utoronto.ca"
-__copyright__ = "2015 Paniz Pakravan"
-__date__ = "06 November 2015"
-
+__authors__ = 'Paniz Pakravan', 'Shu Yun Susan Shen'
+__emails__ = 'p.pakravan@mail.utoronto.ca', 'shuyun.shen@mail.utoronto.ca'
+__date__ = '06 November 2015'
 
 VOWELS = ["a", "e", "i", "o", "u"]
 
 def pig_latinify(word):
     """
     Convert English word input and convert into Pig Latin word.
-
-    :param :
+    :param : word
     :return: output_word
-    :raises:
+    :raises: InputError?
 
+TEST CASE 1:
+    Input: "dog"
+    Expected Output: "ogday"
+    Actual Output: "ogday"
+
+TEST CASE 2:
+    Input: "is"
+    Expected Output: "isyay"
+    Actual Output: "isyay"
+
+TEST CASE 3:
+    Input: "apple"
+    Expected Output: "appleyay"
+    Actual Output: "appleyay"
+
+TEST CASE 4:
+    Inputs: "scratch"
+    Expected Outputs: "atchscray"
+    Actual Outputs: "atchscray"
     """
+
     first_letter = word[0]
 
     if first_letter in VOWELS:
@@ -37,6 +52,7 @@ def pig_latinify(word):
             else:
                 continue
 
-    print output_word
+    return output_word
 
-#pig_latinify("dog")
+print pig_latinify("scratch")
+

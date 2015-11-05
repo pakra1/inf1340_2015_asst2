@@ -6,10 +6,9 @@ This module converts performs substring matching for DNA sequencing
 
 """
 
-__author__ = 'Paniz Pakravan and Shu Yun Susan Shen'
-__email__ = "p.pakravan@mail.utoronto.ca"
-__copyright__ = "2015 Paniz Pakravan"
-__date__ = "06 November 2015"
+__authors__ = 'Paniz Pakravan', 'Shu Yun Susan Shen'
+__emails__ = 'p.pakravan@mail.utoronto.ca', 'shuyun.shen@mail.utoronto.ca'
+__date__ = '06 November 2015'
 
 
 def find(input_string, substring, start, end):
@@ -66,5 +65,4 @@ def multi_find(input_string, substring, start, end):
             # shift the starting position of find, to make sure you can find any remaining substrings in input_string
             start = find_word + 1
     return ",".join(locations_found)
-
 
