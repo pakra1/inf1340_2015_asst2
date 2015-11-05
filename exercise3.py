@@ -11,37 +11,37 @@ __authors__ = 'Paniz Pakravan', 'Shu Yun Susan Shen'
 __emails__ = 'p.pakravan@mail.utoronto.ca', 'shuyun.shen@mail.utoronto.ca'
 __date__ = '06 November 2015'
 
-table1 = [["Number", "Surname", "Age"],
+GRADUATES = [["Number", "Surname", "Age"],
              [7274, "Robinson", 37],
              [7432, "O'Malley", 39],
              [9824, "Darkes", 38]]
-table2 = [["Number", "Surname", "Age"],
+MANAGERS = [["Number", "Surname", "Age"],
             [9297, "O'Malley", 56],
             [7432, "O'Malley", 39],
             [9824, "Darkes", 38]]
 
-def check_stat(table1, table2):
+def check_stat(GRADUATES, MANAGERS):
 
 # first thing check row 0, looking at the number of columns
 
-    if len(table1[0])==len(table2[0]):
+    if len(GRADUATES[0])==len(MANAGERS[0]):
         #counter to keep track of similar column titles and numbers
         count = 0
-        for index in range(len(table1[0])):
-            table1_column = table1[0][index]
-            table2_column = table2[0][index]
-            if table1_column == table2_column:
+        for index in range(len(GRADUATES[0])):
+            GRADUATES_column = GRADUATES[0][index]
+            MANAGERS_column = MANAGERS[0][index]
+            if GRADUATES_column == MANAGERS_column:
                 count += 1
-        if count == len(table1[0]):
+        if count == len(GRADUATES[0]):
             return 0
         else:
             return "MismatchedAttributesException"
     else:
         return "MismatchedAttributesException"
 
-check_stat(table1, table2)
+check_stat(GRADUATES, MANAGERS)
 
-def union(table1, table2):
+def union(GRADUATES, MANAGERS):
     """
     Perform the union set operation on tables, table1 and table2.
 
@@ -52,58 +52,58 @@ def union(table1, table2):
         if tables t1 and t2 don't have the same attributes
     """
 #returns new table with all unique rows that appear in either table
-    x = check_stat(table1, table2)
+    x = check_stat(GRADUATES, MANAGERS)
     new_table = []
-    new_table.append(table1)
+    new_table.append(GRADUATES)
     if x == 0:
-        for i in range(len(table2)):
-            item = table2[i]
-            if item not in table1:
+        for i in range(len(MANAGERS)):
+            item = MANAGERS[i]
+            if item not in GRADUATES:
                 new_table.append(item)
             else:
                 continue
-    print new_table
+    return new_table
 
-union(table1,table2)
+union(GRADUATES,MANAGERS)
 
-def intersection(table1, table2):
+def intersection(GRADUATES, MANAGERS):
     """
     Describe your function
 
     """
 #returns new table with unique rows that appear in both tables
-    x = check_stat(table1, table2)
+    x = check_stat(GRADUATES, MANAGERS)
     new_table = []
     if x == 0:
-        for i in range(len(table1)):
-            item = table1[i]
-            if item in table2:
+        for i in range(len(GRADUATES)):
+            item = GRADUATES[i]
+            if item in MANAGERS:
                 new_table.append(item)
             else:
                 continue
-    print new_table
+    return new_table
 
-intersection(table1,table2)
+intersection(GRADUATES,MANAGERS)
 
-def difference(table1, table2):
+def difference(GRADUATES, MANAGERS):
     """
     Describe your function
 
     """
 #returns new table with unique rows in the first table
-    x = check_stat(table1, table2)
+    x = check_stat(GRADUATES, MANAGERS)
     new_table = []
-    new_table.append(table1[0])
+    new_table.append(GRADUATES[0])
     if x == 0:
-        for i in range(len(table1)):
-            item = table1[i]
-            if item not in table2:
+        for i in range(len(GRADUATES)):
+            item = GRADUATES[i]
+            if item not in MANAGERS:
                 new_table.append(item)
             else:
                 continue
-    print new_table
+    return new_table
 
-difference (table1,table2)
+difference (GRADUATES,MANAGERS)
 
 #####################
 # HELPER FUNCTIONS ##
@@ -130,4 +130,5 @@ class MismatchedAttributesException(Exception):
     don't have the same attributes.
     """
     pass
+
 
