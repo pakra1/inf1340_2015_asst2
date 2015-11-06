@@ -58,7 +58,7 @@ def test_union():
 
     assert is_equal(result, union(GRADUATES, MANAGERS))
 
-def test_union():
+def test_union_advanced():
     """
     Test union operation.
     """
@@ -70,14 +70,18 @@ def test_union():
 
     assert is_equal(result, union(FRIENDS1, FRIENDS2))
 
-def negative_test_union():
+def test_union_negative():
     """
     Test error union operation.
     """
-    if not is_equal(result, union(table1, table2)):
+    result = [["Number", "Surname", "Age"],
+              [7274, "Robinson", 37],
+              [9297, "O'Malley", 56],
+              [7432, "O'Malley", 39],
+              [9824, "Darkes", 38]]
+
+    if not is_equal(result, union(GRADUATES, MANAGERS)):
         assert True
-    else:
-        assert False
 
 
 def test_intersection():
@@ -90,7 +94,7 @@ def test_intersection():
 
     assert is_equal(result, intersection(GRADUATES, MANAGERS))
 
-def test_intersection():
+def test_intersection_advanced():
     """
     Test intersection operation.
     """
@@ -100,14 +104,16 @@ def test_intersection():
 
     assert is_equal(result, intersection(FRIENDS1, FRIENDS2))
 
-def negative_test_intersection():
+def test_intersection_negative():
     """
     Test error intersection operation.
     """
+    result = [["Number", "Surname", "Age"],
+              [7432, "O'Malley", 39],
+              [9824, "Darkes", 38]]
+
     if not is_equal(result, intersection(GRADUATES, MANAGERS)):
         assert True
-    else:
-        assert False
 
 
 def test_difference():
@@ -119,7 +125,7 @@ def test_difference():
 
     assert is_equal(result, difference(GRADUATES, MANAGERS))
 
-def test_difference():
+def test_difference_advanced():
     """
     Test difference operation.
     """
@@ -128,11 +134,12 @@ def test_difference():
 
     assert is_equal(result, difference(FRIENDS1, FRIENDS2))
 
-def negative_test_difference():
+def test_difference_negative():
     """
     Test error intersection operation.
     """
+    result = [["Number", "Surname", "Age"],
+              [7274, "Robinson", 37]]
+
     if not is_equal(result, difference(GRADUATES, MANAGERS)):
         assert True
-    else:
-        assert False

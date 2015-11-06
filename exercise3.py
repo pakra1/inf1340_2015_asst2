@@ -36,9 +36,9 @@ def check_stat(GRADUATES, MANAGERS):
         if count == len(GRADUATES[0]):
             return 0
         else:
-            return "MismatchedAttributesException"
+            raise "MismatchedAttributesException"
     else:
-        return "MismatchedAttributesException"
+        raise "MismatchedAttributesException"
 
 check_stat(GRADUATES, MANAGERS)
 
