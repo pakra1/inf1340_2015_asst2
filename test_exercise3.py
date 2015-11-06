@@ -65,10 +65,8 @@ def test_intersection():
     assert is_equal(result, intersection(GRADUATES, MANAGERS))
 
 def negative_test_intersection():
-    result[["Number", "Surname", "Age"],
-                [7432, "Lumiere", 39],
-                [9824, "Walter", 38]]
-    Return -1
+    intersection["Lumiere", "Walter"]
+    return -1
 
 
 def test_difference():
