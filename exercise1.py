@@ -54,5 +54,5 @@ TEST CASE 4:
 
     return output_word
 
-pig_latinify("scratch")
+#pig_latinify("scratch")
 
