@@ -70,8 +70,9 @@ def union(GRADUATES, MANAGERS):
 
 def intersection(GRADUATES, MANAGERS):
     """
-    Describe your function
-
+    :param: table1, table2
+    :return: all rows in both tables
+    :raises: MismatchedAttributesException
     """
 #returns new table with unique rows that appear in both tables
     x = check_stat(GRADUATES, MANAGERS)
@@ -90,8 +91,9 @@ def intersection(GRADUATES, MANAGERS):
 
 def difference(GRADUATES, MANAGERS):
     """
-    Describe your function
-
+    :param: table1, table2
+    :return: all items in first table only
+    :raises: MismatchedAttributesException
     """
 #returns new table with unique rows in the first table
     x = check_stat(GRADUATES, MANAGERS)
