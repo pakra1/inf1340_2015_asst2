@@ -12,7 +12,6 @@ __date__ = '06 November 2015'
 
 from exercise3 import union, intersection, difference
 
-
 ###########
 # TABLES ##
 ###########
@@ -25,6 +24,16 @@ MANAGERS = [["Number", "Surname", "Age"],
             [9297, "O'Malley", 56],
             [7432, "O'Malley", 39],
             [9824, "Darkes", 38]]
+
+FRIENDS1 = [["Number", "Name", "Age"],
+             [1111, "Rachel", 37],
+             [2222, "Joey", 39],
+             [3333, "Ross", 38]]
+
+FRIENDS2 = [["Number", "Name", "Age"],
+            [4444, "Monica", 56],
+            [2222, "Joey", 39],
+            [3333, "Ross", 38]]
 
 
 #####################
@@ -41,7 +50,6 @@ def test_union():
     """
     Test union operation.
     """
-
     result = [["Number", "Surname", "Age"],
               [7274, "Robinson", 37],
               [9297, "O'Malley", 56],
@@ -50,9 +58,25 @@ def test_union():
 
     assert is_equal(result, union(GRADUATES, MANAGERS))
 
+def test_union():
+    """
+    Test union operation.
+    """
+    result = [["Number", "Name", "Age"],
+             [1111, "Rachel", 37],
+             [4444, "Monica", 56],
+             [2222, "Joey", 39],
+             [3333, "Ross", 38]]
+
+    assert is_equal(result, union(FRIENDS1, FRIENDS2))
+
 def negative_test_union():
-    is_equal(result, union(table3, table4))
+    """
+    Test error union operation.
+    """
+    is_equal(result, union(table1, table2))
     return -1
+
 
 def test_intersection():
     """
@@ -64,8 +88,21 @@ def test_intersection():
 
     assert is_equal(result, intersection(GRADUATES, MANAGERS))
 
+def test_intersection():
+    """
+    Test intersection operation.
+    """
+    result = [["Number", "Name", "Age"],
+              [2222, "Joey", 39],
+             [3333, "Ross", 38]]
+
+    assert is_equal(result, intersection(FRIENDS1, FRIENDS2))
+
 def negative_test_intersection():
-    intersection["Lumiere", "Walter"]
+    """
+    Test error intersection operation.
+    """
+    is_equal(result, intersection(table1, table2))
     return -1
 
 
@@ -73,8 +110,23 @@ def test_difference():
     """
     Test difference operation.
     """
-
     result = [["Number", "Surname", "Age"],
               [7274, "Robinson", 37]]
 
     assert is_equal(result, difference(GRADUATES, MANAGERS))
+
+def test_difference():
+    """
+    Test difference operation.
+    """
+    result = [["Number", "Name", "Age"],
+              [1111, "Rachel", 37]]
+
+    assert is_equal(result, difference(FRIENDS1, FRIENDS2))
+
+def negative_test_difference():
+    """
+    Test error intersection operation.
+    """
+    is_equal(result, difference(table1, table2))
+    return -1
