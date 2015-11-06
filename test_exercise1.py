@@ -28,4 +28,3 @@ def test_advanced():
     assert pig_latinify("porcupine") == "orcupinepay"
     assert pig_latinify("seal") == "ealsay"
     assert pig_latinify("boar") == "oarbay"
-

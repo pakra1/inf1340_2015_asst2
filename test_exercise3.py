@@ -74,8 +74,10 @@ def negative_test_union():
     """
     Test error union operation.
     """
-    is_equal(result, union(table1, table2))
-    return -1
+    if not is_equal(result, union(table1, table2)):
+        assert True
+    else:
+        assert False
 
 
 def test_intersection():
@@ -102,8 +104,10 @@ def negative_test_intersection():
     """
     Test error intersection operation.
     """
-    is_equal(result, intersection(table1, table2))
-    return -1
+    if not is_equal(result, intersection(table1, table2)):
+        assert True
+    else:
+        assert False
 
 
 def test_difference():
@@ -128,5 +132,7 @@ def negative_test_difference():
     """
     Test error intersection operation.
     """
-    is_equal(result, difference(table1, table2))
-    return -1
+    if not is_equal(result, difference(GRADUATES, MANAGERS)):
+        assert True
+    else:
+        assert False

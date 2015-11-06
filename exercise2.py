@@ -42,6 +42,7 @@ def find(input_string, substring, start, end):
     # if there is no match or only a couple of letters in substring found
     if found_count < len(substring):
         return -1
+
 #find()
 
 def multi_find(input_string, substring, start, end):
