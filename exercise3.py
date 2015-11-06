@@ -66,7 +66,7 @@ def union(GRADUATES, MANAGERS):
                 new_table.append(MANAGERS[i])
     return new_table
 
-print union(GRADUATES,MANAGERS)
+# union(GRADUATES,MANAGERS)
 
 def intersection(GRADUATES, MANAGERS):
     """
@@ -86,7 +86,7 @@ def intersection(GRADUATES, MANAGERS):
                 continue
     return new_table
 
-print intersection(GRADUATES,MANAGERS)
+# intersection(GRADUATES,MANAGERS)
 
 def difference(GRADUATES, MANAGERS):
     """
@@ -107,7 +107,7 @@ def difference(GRADUATES, MANAGERS):
                 continue
     return new_table
 
-print difference (GRADUATES,MANAGERS)
+# difference (GRADUATES,MANAGERS)
 
 #####################
 # HELPER FUNCTIONS ##
