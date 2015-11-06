@@ -104,7 +104,7 @@ def negative_test_intersection():
     """
     Test error intersection operation.
     """
-    if not is_equal(result, intersection(table1, table2)):
+    if not is_equal(result, intersection(GRADUATES, MANAGERS)):
         assert True
     else:
         assert False
